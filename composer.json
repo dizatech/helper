@@ -22,7 +22,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Dizatech\\Helper\\DizatechHelperSeriveProvider"
+        "Dizatech\\Helper\\DizatechHelperServiceProvider"
       ]
     }
   }
