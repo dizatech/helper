@@ -20,7 +20,8 @@ class DizatechHelperServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../config/courier.php' => config_path('courier.php'),
+            __DIR__.'/lang/en/dizatech_helper.php' => lang_path('en/dizatech_helper.php'),
+            __DIR__.'/lang/fa/dizatech_helper.php' => lang_path('fa/dizatech_helper.php'),
         ]);
     }
 }
