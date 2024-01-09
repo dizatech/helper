@@ -78,3 +78,9 @@ public function handleForm(Request $request)
 
 Add ``new Nationalid()`` to validation rules array.
 String passed for validation must be 11 characters long.
+
+### Internationalization
+You can simply translate the error message for any of the validation rules via languaga files. Use the following instructions for error message internationalization:
+
+1. Run ``php artisan lang:publish`` command to genrate lang folder and default message files.
+2. Add 

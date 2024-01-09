@@ -18,5 +18,12 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^10.4"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Dizatech\\Helper\\DizatechHelperSeriveProvider"
+      ]
+    }
   }
 }

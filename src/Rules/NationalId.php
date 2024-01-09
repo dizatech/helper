@@ -40,7 +40,7 @@ class NationalId implements ValidationRule
         }
 
         if (!$valid) {
-            $fail("SOME THING");
+            $fail(trans('validation.national_id'));
         }
     }
 }

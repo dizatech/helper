@@ -47,7 +47,7 @@ class NationalCode implements ValidationRule
         }
 
         if (!$valid) {
-            $fail("SOME THING");
+            $fail(trans('validation.national_code'));
         }
     }
 }
