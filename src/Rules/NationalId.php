@@ -40,7 +40,7 @@ class NationalId implements ValidationRule
         }
 
         if (!$valid) {
-            $fail(trans('validation.national_id'));
+            $fail(trans('dizatech_helper.national_id'));
         }
     }
 }

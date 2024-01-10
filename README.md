@@ -1,6 +1,17 @@
 # Dizatech Helper
 Dizatech is a package developed to add validation, banking and view helpers to Laravel projects with Iranian/Persian projects' needs in mind. This package is highly inspired by the works of my dear friend and colleague @imvahid.
 
+## Installation
+1. Require the package via composer
+```bash
+composer require dizatech/helper
+```
+
+2. Run the following command to publish package files
+```bash
+php artisan vendor:publish --provider=Dizatech\Helper\DizatechHelperServiceProvider
+```
+
 ## Validation Rules
 
 ### National Code
@@ -12,7 +23,7 @@ String passed for validation must be 10 characters long. National codes with zer
 #### Zero-padding example
 ###### Bare php:
 ```php
-$nartional_code = str_pad($code, 10, '0', STR_PAD_LEFT);
+$national_code = str_pad($code, 10, '0', STR_PAD_LEFT);
 ```
 ###### Inside Laravel reuest file:
 ```php
@@ -80,7 +91,12 @@ Add ``new Nationalid()`` to validation rules array.
 String passed for validation must be 11 characters long.
 
 ### Internationalization
-You can simply translate the error message for any of the validation rules via languaga files. Use the following instructions for error message internationalization:
-
-1. Run ``php artisan lang:publish`` command to genrate lang folder and default message files.
-2. Add 
+If you haven't run ``php artisan vendor:publish`` command yet, first run the floowing command to publish language files:
+```bash
+php artisan vendor:publish --provider=Dizatech\Helper\DizatechHelperServiceProvider
+```
+Language files will be copied to ``en`` and ``fa`` folders inside ``lang`` folder of your project. You can customize error message as desired. Make sure you set coorect locale for your app in ``config/app.php``.
+For Farsi it shuld be set as:
+```php
+'locale' => 'fa'
+```

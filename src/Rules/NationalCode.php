@@ -47,7 +47,7 @@ class NationalCode implements ValidationRule
         }
 
         if (!$valid) {
-            $fail(trans('validation.national_code'));
+            $fail(trans('dizatech_helper.national_code'));
         }
     }
 }
